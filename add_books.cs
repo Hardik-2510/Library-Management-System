@@ -25,13 +25,32 @@ namespace Library_Management_System
 
         private void button1_Click(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection(connStr);
-            SqlCommand cmd = con.CreateCommand();
-            cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "insert into books_info value('"+ textBox1.Text +"' , '" + textBox2.Text + "' , '" + textBox3.Text + "' , '" + textBox4.Text + "' , " + textBox5.Text + " , " + textBox6.Text + ")";
-            cmd.ExecuteNonQuery();
+            using (SqlConnection con = new SqlConnection(connStr))
+            {
+                con.Open();
 
-            con.Close();
+                using (SqlCommand cmd = new SqlCommand(
+                    "INSERT INTO books_info VALUES (@bname,@author,@publisher,@edition,@price,@qty)", con))
+                {
+                    cmd.Parameters.AddWithValue("@bname", textBox1.Text);
+                    cmd.Parameters.AddWithValue("@author", textBox2.Text);
+                    cmd.Parameters.AddWithValue("@publisher", textBox3.Text);
+                    cmd.Parameters.AddWithValue("@edition", textBox4.Text);
+                    cmd.Parameters.AddWithValue("@price", Convert.ToInt32(textBox5.Text));
+                    cmd.Parameters.AddWithValue("@qty", Convert.ToInt32(textBox6.Text));
+
+                    cmd.ExecuteNonQuery();
+                }
+            }
+
+            MessageBox.Show("Book added successfully");
+
+            textBox1.Text = "";
+            textBox2.Text = "";
+            textBox3.Text = "";
+            textBox4.Text = "";
+            textBox5.Text = "";
+            textBox6.Text = "";
         }
     }
 }
