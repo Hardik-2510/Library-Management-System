@@ -17,118 +17,109 @@
 
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources =
-                new System.ComponentModel.ComponentResourceManager(typeof(login_form));
-
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.SuspendLayout();
-
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(login_form));
+            panel1 = new Panel();
+            button1 = new Button();
+            textBox2 = new TextBox();
+            textBox1 = new TextBox();
+            label2 = new Label();
+            label1 = new Label();
+            pictureBox1 = new PictureBox();
+            panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            SuspendLayout();
+            // 
             // panel1
-            this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.textBox2);
-            this.panel1.Controls.Add(this.textBox1);
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Location = new System.Drawing.Point(6, 3);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1121, 468);
-            this.panel1.TabIndex = 0;
-
+            // 
+            panel1.BackColor = Color.White;
+            panel1.Controls.Add(button1);
+            panel1.Controls.Add(textBox2);
+            panel1.Controls.Add(textBox1);
+            panel1.Controls.Add(label2);
+            panel1.Controls.Add(label1);
+            panel1.Controls.Add(pictureBox1);
+            panel1.Location = new Point(6, 3);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(907, 245);
+            panel1.TabIndex = 0;
+            // 
             // button1
-            this.button1.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.button1.Font = new System.Drawing.Font(
-                "Arial Rounded MT Bold", 14F,
-                System.Drawing.FontStyle.Regular,
-                System.Drawing.GraphicsUnit.Point, 0);
-            this.button1.ForeColor = System.Drawing.Color.Cornsilk;
-            this.button1.Location = new System.Drawing.Point(636, 349);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(163, 68);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "Login";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
-
+            // 
+            button1.BackColor = Color.DeepSkyBlue;
+            button1.Font = new Font("Arial Rounded MT Bold", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button1.ForeColor = Color.Cornsilk;
+            button1.Location = new Point(489, 168);
+            button1.Name = "button1";
+            button1.Size = new Size(163, 68);
+            button1.TabIndex = 7;
+            button1.Text = "Login";
+            button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click_1;
+            // 
             // textBox2
-            this.textBox2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 18F);
-            this.textBox2.Location = new System.Drawing.Point(702, 262);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.PasswordChar = '*';
-            this.textBox2.Size = new System.Drawing.Size(390, 49);
-            this.textBox2.TabIndex = 6;
-
+            // 
+            textBox2.Font = new Font("Arial Rounded MT Bold", 18F);
+            textBox2.Location = new Point(489, 91);
+            textBox2.Name = "textBox2";
+            textBox2.PasswordChar = '*';
+            textBox2.Size = new Size(390, 49);
+            textBox2.TabIndex = 6;
+            // 
             // textBox1
-            this.textBox1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 18F);
-            this.textBox1.Location = new System.Drawing.Point(702, 170);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(390, 49);
-            this.textBox1.TabIndex = 5;
-
-            // label3
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Arial Rounded MT Bold", 32F);
-            this.label3.Location = new System.Drawing.Point(474, 56);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(206, 75);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Login";
-
+            // 
+            textBox1.Font = new Font("Arial Rounded MT Bold", 18F);
+            textBox1.Location = new Point(489, 20);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(390, 49);
+            textBox1.TabIndex = 5;
+            // 
             // label2
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 18F);
-            this.label2.Location = new System.Drawing.Point(454, 265);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(193, 42);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Password";
-
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Arial Rounded MT Bold", 18F);
+            label2.Location = new Point(241, 94);
+            label2.Name = "label2";
+            label2.Size = new Size(193, 42);
+            label2.TabIndex = 2;
+            label2.Text = "Password";
+            // 
             // label1
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 18F);
-            this.label1.Location = new System.Drawing.Point(454, 173);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(198, 42);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Username";
-
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Arial Rounded MT Bold", 18F);
+            label1.Location = new Point(241, 23);
+            label1.Name = "label1";
+            label1.Size = new Size(198, 42);
+            label1.TabIndex = 1;
+            label1.Text = "Username";
+            // 
             // pictureBox1
-            this.pictureBox1.Image =
-                ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(49, 56);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(374, 361);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-
+            // 
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(6, 9);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(223, 227);
+            pictureBox1.TabIndex = 0;
+            pictureBox1.TabStop = false;
+            // 
             // login_form
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1131, 472);
-            this.Controls.Add(this.panel1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Name = "login_form";
-            this.Text = "Login Form";
-            this.Load += new System.EventHandler(this.login_form_Load);
-
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.ResumeLayout(false);
+            // 
+            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.White;
+            ClientSize = new Size(923, 253);
+            Controls.Add(panel1);
+            FormBorderStyle = FormBorderStyle.Fixed3D;
+            MaximizeBox = false;
+            MinimizeBox = false;
+            Name = "login_form";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "HackyBoy Learing Center - Login";
+            Load += login_form_Load;
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ResumeLayout(false);
         }
 
         #endregion
@@ -139,7 +130,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button button1;
     }
 }

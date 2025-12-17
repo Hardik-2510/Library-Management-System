@@ -35,6 +35,7 @@
             statusStrip = new StatusStrip();
             toolStripStatusLabel = new ToolStripStatusLabel();
             toolTip = new ToolTip(components);
+            viewBooksToolStripMenuItem = new ToolStripMenuItem();
             menuStrip.SuspendLayout();
             statusStrip.SuspendLayout();
             SuspendLayout();
@@ -52,7 +53,7 @@
             // 
             // booksToolStripMenuItem
             // 
-            booksToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { addNewBooksToolStripMenuItem });
+            booksToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { addNewBooksToolStripMenuItem, viewBooksToolStripMenuItem });
             booksToolStripMenuItem.Name = "booksToolStripMenuItem";
             booksToolStripMenuItem.Size = new Size(77, 29);
             booksToolStripMenuItem.Text = "Books";
@@ -81,6 +82,13 @@
             toolStripStatusLabel.Size = new Size(60, 25);
             toolStripStatusLabel.Text = "Status";
             // 
+            // viewBooksToolStripMenuItem
+            // 
+            viewBooksToolStripMenuItem.Name = "viewBooksToolStripMenuItem";
+            viewBooksToolStripMenuItem.Size = new Size(270, 34);
+            viewBooksToolStripMenuItem.Text = "View Books";
+            viewBooksToolStripMenuItem.Click += viewBooksToolStripMenuItem_Click;
+            // 
             // mdi_user
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
@@ -92,7 +100,8 @@
             MainMenuStrip = menuStrip;
             Margin = new Padding(5, 6, 5, 6);
             Name = "mdi_user";
-            Text = "MDIParent1";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Welcome to HackyBoy Learning Center";
             WindowState = FormWindowState.Maximized;
             menuStrip.ResumeLayout(false);
             menuStrip.PerformLayout();
@@ -111,6 +120,7 @@
         private System.Windows.Forms.ToolTip toolTip;
         private ToolStripMenuItem booksToolStripMenuItem;
         private ToolStripMenuItem addNewBooksToolStripMenuItem;
+        private ToolStripMenuItem viewBooksToolStripMenuItem;
     }
 }
 
