@@ -239,6 +239,7 @@
             MinimizeBox = false;
             Name = "add_student_info";
             Text = "Add Student Info";
+            Load += add_student_info_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();

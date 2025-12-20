@@ -32,10 +32,13 @@
             menuStrip = new MenuStrip();
             booksToolStripMenuItem = new ToolStripMenuItem();
             addNewBooksToolStripMenuItem = new ToolStripMenuItem();
+            viewBooksToolStripMenuItem = new ToolStripMenuItem();
+            studentToolStripMenuItem = new ToolStripMenuItem();
+            addStudentToolStripMenuItem = new ToolStripMenuItem();
+            viewStudentToolStripMenuItem = new ToolStripMenuItem();
             statusStrip = new StatusStrip();
             toolStripStatusLabel = new ToolStripStatusLabel();
             toolTip = new ToolTip(components);
-            viewBooksToolStripMenuItem = new ToolStripMenuItem();
             menuStrip.SuspendLayout();
             statusStrip.SuspendLayout();
             SuspendLayout();
@@ -43,7 +46,7 @@
             // menuStrip
             // 
             menuStrip.ImageScalingSize = new Size(24, 24);
-            menuStrip.Items.AddRange(new ToolStripItem[] { booksToolStripMenuItem });
+            menuStrip.Items.AddRange(new ToolStripItem[] { booksToolStripMenuItem, studentToolStripMenuItem });
             menuStrip.Location = new Point(0, 0);
             menuStrip.Name = "menuStrip";
             menuStrip.Padding = new Padding(10, 4, 0, 4);
@@ -62,8 +65,36 @@
             // 
             addNewBooksToolStripMenuItem.Name = "addNewBooksToolStripMenuItem";
             addNewBooksToolStripMenuItem.Size = new Size(270, 34);
-            addNewBooksToolStripMenuItem.Text = "Add New Books";
+            addNewBooksToolStripMenuItem.Text = "Add Books";
             addNewBooksToolStripMenuItem.Click += addNewBooksToolStripMenuItem_Click;
+            // 
+            // viewBooksToolStripMenuItem
+            // 
+            viewBooksToolStripMenuItem.Name = "viewBooksToolStripMenuItem";
+            viewBooksToolStripMenuItem.Size = new Size(270, 34);
+            viewBooksToolStripMenuItem.Text = "View Books";
+            viewBooksToolStripMenuItem.Click += viewBooksToolStripMenuItem_Click;
+            // 
+            // studentToolStripMenuItem
+            // 
+            studentToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { addStudentToolStripMenuItem, viewStudentToolStripMenuItem });
+            studentToolStripMenuItem.Name = "studentToolStripMenuItem";
+            studentToolStripMenuItem.Size = new Size(89, 29);
+            studentToolStripMenuItem.Text = "Student";
+            // 
+            // addStudentToolStripMenuItem
+            // 
+            addStudentToolStripMenuItem.Name = "addStudentToolStripMenuItem";
+            addStudentToolStripMenuItem.Size = new Size(270, 34);
+            addStudentToolStripMenuItem.Text = "Add Student";
+            addStudentToolStripMenuItem.Click += addStudentToolStripMenuItem_Click;
+            // 
+            // viewStudentToolStripMenuItem
+            // 
+            viewStudentToolStripMenuItem.Name = "viewStudentToolStripMenuItem";
+            viewStudentToolStripMenuItem.Size = new Size(270, 34);
+            viewStudentToolStripMenuItem.Text = "View Student";
+            viewStudentToolStripMenuItem.Click += viewStudentToolStripMenuItem_Click;
             // 
             // statusStrip
             // 
@@ -81,13 +112,6 @@
             toolStripStatusLabel.Name = "toolStripStatusLabel";
             toolStripStatusLabel.Size = new Size(60, 25);
             toolStripStatusLabel.Text = "Status";
-            // 
-            // viewBooksToolStripMenuItem
-            // 
-            viewBooksToolStripMenuItem.Name = "viewBooksToolStripMenuItem";
-            viewBooksToolStripMenuItem.Size = new Size(270, 34);
-            viewBooksToolStripMenuItem.Text = "View Books";
-            viewBooksToolStripMenuItem.Click += viewBooksToolStripMenuItem_Click;
             // 
             // mdi_user
             // 
@@ -121,6 +145,9 @@
         private ToolStripMenuItem booksToolStripMenuItem;
         private ToolStripMenuItem addNewBooksToolStripMenuItem;
         private ToolStripMenuItem viewBooksToolStripMenuItem;
+        private ToolStripMenuItem studentToolStripMenuItem;
+        private ToolStripMenuItem addStudentToolStripMenuItem;
+        private ToolStripMenuItem viewStudentToolStripMenuItem;
     }
 }
 

@@ -115,5 +115,17 @@ namespace Library_Management_System
             view_books vb = new view_books();
             vb.Show();
         }
+
+        private void addStudentToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            add_student_info asi = new add_student_info();
+            asi.Show();
+        }
+
+        private void viewStudentToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            view_student_info vsi = new view_student_info();
+            vsi.Show();
+        }
     }
 }
