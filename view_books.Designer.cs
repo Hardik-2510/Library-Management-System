@@ -318,7 +318,7 @@
             Controls.Add(panel1);
             Controls.Add(dataGridView1);
             Name = "view_books";
-            Text = "view_books";
+            Text = "View Books";
             Load += view_books_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             panel1.ResumeLayout(false);
