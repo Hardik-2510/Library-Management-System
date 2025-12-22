@@ -22,19 +22,6 @@ namespace Library_Management_System
             InitializeComponent();
         }
 
-        // Select image
-        private void button1_Click(object sender, EventArgs e)
-        {
-            openFileDialog1.Filter =
-                "Image Files (*.jpg;*.jpeg;*.png)|*.jpg;*.jpeg;*.png";
-
-            if (openFileDialog1.ShowDialog() == DialogResult.OK)
-            {
-                pictureBox1.Image = Image.FromFile(openFileDialog1.FileName);
-                pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
-            }
-        }
-
         private void add_student_info_Load(object sender, EventArgs e)
         {
             // Optional: initialization code
@@ -46,28 +33,6 @@ namespace Library_Management_System
         {
             try
             {
-                if (string.IsNullOrEmpty(openFileDialog1.FileName))
-                {
-                    MessageBox.Show("Please select student image");
-                    return;
-                }
-
-                // Base directory (same as view form)
-                string basePath = AppDomain.CurrentDomain.BaseDirectory;
-
-                // Ensure folder exists
-                string imageFolder = Path.Combine(basePath, "student_images");
-                Directory.CreateDirectory(imageFolder);
-
-                // Unique image name
-                string imageName = Guid.NewGuid().ToString() + ".jpg";
-                string fullImagePath = Path.Combine(imageFolder, imageName);
-
-                // Save image
-                File.Copy(openFileDialog1.FileName, fullImagePath, true);
-
-                // Store relative path in DB
-                imageRelativePath = @"student_images\" + imageName;
 
                 using (SqlConnection conn = new SqlConnection(connStr))
                 {
@@ -110,7 +75,6 @@ namespace Library_Management_System
             textBox4.Clear();
             textBox5.Clear();
             textBox6.Clear();
-            pictureBox1.Image = null;
             imageRelativePath = string.Empty;
         }
     }

@@ -34,8 +34,6 @@
             panel1 = new Panel();
             label9 = new Label();
             button1 = new Button();
-            upload_image = new Button();
-            label8 = new Label();
             label7 = new Label();
             s_contact = new TextBox();
             label6 = new Label();
@@ -88,8 +86,6 @@
             // 
             panel1.Controls.Add(label9);
             panel1.Controls.Add(button1);
-            panel1.Controls.Add(upload_image);
-            panel1.Controls.Add(label8);
             panel1.Controls.Add(label7);
             panel1.Controls.Add(s_contact);
             panel1.Controls.Add(label6);
@@ -122,33 +118,13 @@
             button1.BackColor = Color.DeepSkyBlue;
             button1.Font = new Font("Bahnschrift", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             button1.ForeColor = Color.Cornsilk;
-            button1.Location = new Point(1145, 177);
+            button1.Location = new Point(965, 96);
             button1.Name = "button1";
-            button1.Size = new Size(290, 73);
+            button1.Size = new Size(175, 154);
             button1.TabIndex = 14;
             button1.Text = "Update";
             button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click;
-            // 
-            // upload_image
-            // 
-            upload_image.Font = new Font("Bahnschrift", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            upload_image.Location = new Point(1145, 96);
-            upload_image.Name = "upload_image";
-            upload_image.Size = new Size(290, 36);
-            upload_image.TabIndex = 13;
-            upload_image.Text = "Select Image ";
-            upload_image.UseVisualStyleBackColor = true;
-            // 
-            // label8
-            // 
-            label8.AutoSize = true;
-            label8.Font = new Font("Bahnschrift", 12F);
-            label8.Location = new Point(968, 99);
-            label8.Name = "label8";
-            label8.Size = new Size(171, 29);
-            label8.TabIndex = 12;
-            label8.Text = "Choose Image ";
             // 
             // label7
             // 
@@ -300,8 +276,6 @@
         private TextBox s_department;
         private Label label5;
         private TextBox s_semester;
-        private Label label8;
-        private Button upload_image;
         private OpenFileDialog openFileDialog1;
         private Button button1;
         private Label label9;

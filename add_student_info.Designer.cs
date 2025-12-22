@@ -30,9 +30,6 @@
         {
             panel1 = new Panel();
             button2 = new Button();
-            button1 = new Button();
-            label7 = new Label();
-            pictureBox1 = new PictureBox();
             textBox6 = new TextBox();
             label6 = new Label();
             textBox5 = new TextBox();
@@ -45,17 +42,12 @@
             label2 = new Label();
             textBox1 = new TextBox();
             label1 = new Label();
-            openFileDialog1 = new OpenFileDialog();
             panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // panel1
             // 
             panel1.Controls.Add(button2);
-            panel1.Controls.Add(button1);
-            panel1.Controls.Add(label7);
-            panel1.Controls.Add(pictureBox1);
             panel1.Controls.Add(textBox6);
             panel1.Controls.Add(label6);
             panel1.Controls.Add(textBox5);
@@ -70,7 +62,7 @@
             panel1.Controls.Add(label1);
             panel1.Location = new Point(12, 12);
             panel1.Name = "panel1";
-            panel1.Size = new Size(939, 752);
+            panel1.Size = new Size(557, 645);
             panel1.TabIndex = 0;
             // 
             // button2
@@ -79,42 +71,13 @@
             button2.FlatStyle = FlatStyle.Flat;
             button2.Font = new Font("Bahnschrift", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
             button2.ForeColor = Color.Cornsilk;
-            button2.Location = new Point(195, 653);
+            button2.Location = new Point(195, 576);
             button2.Name = "button2";
             button2.Size = new Size(142, 64);
             button2.TabIndex = 15;
             button2.Text = "Save";
             button2.UseVisualStyleBackColor = false;
             button2.Click += button2_Click;
-            // 
-            // button1
-            // 
-            button1.Font = new Font("Bahnschrift", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button1.Location = new Point(195, 567);
-            button1.Name = "button1";
-            button1.Size = new Size(342, 44);
-            button1.TabIndex = 14;
-            button1.Text = "Upload";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
-            // 
-            // label7
-            // 
-            label7.AutoSize = true;
-            label7.Font = new Font("Bahnschrift", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label7.Location = new Point(18, 575);
-            label7.Name = "label7";
-            label7.Size = new Size(154, 29);
-            label7.TabIndex = 13;
-            label7.Text = "Select Image";
-            // 
-            // pictureBox1
-            // 
-            pictureBox1.Location = new Point(563, 80);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(359, 524);
-            pictureBox1.TabIndex = 12;
-            pictureBox1.TabStop = false;
             // 
             // textBox6
             // 
@@ -224,15 +187,11 @@
             label1.TabIndex = 0;
             label1.Text = "Name";
             // 
-            // openFileDialog1
-            // 
-            openFileDialog1.FileName = "User Image";
-            // 
             // add_student_info
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(963, 785);
+            ClientSize = new Size(581, 669);
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.Fixed3D;
             MaximizeBox = false;
@@ -242,7 +201,6 @@
             Load += add_student_info_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
         }
 
@@ -257,14 +215,10 @@
         private Label label2;
         private TextBox textBox1;
         private Label label1;
-        private PictureBox pictureBox1;
         private TextBox textBox6;
         private Label label6;
         private TextBox textBox5;
         private Label label5;
         private Button button2;
-        private Button button1;
-        private Label label7;
-        private OpenFileDialog openFileDialog1;
     }
 }
