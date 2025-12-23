@@ -140,6 +140,24 @@ namespace Library_Management_System
                 {
                     conn.Open();
 
+                    SqlCommand cmd2 = new SqlCommand("SELECT * FROM books_info WHERE books_name = @books_name", conn);
+                    cmd2.Parameters.AddWithValue("@books_name", book_name.Text);
+                    cmd2.ExecuteNonQuery();
+                    SqlDataAdapter da2 = new SqlDataAdapter(cmd2);
+                    DataTable dt2 = new DataTable();
+                    da2.Fill(dt2);
+                    foreach (DataRow dr in dt2.Rows)
+                    {
+                        int books_qty = Convert.ToInt32(dr["available_qty"].ToString());
+                        if (books_qty <= 0)
+                        {
+                            MessageBox.Show("Book not available");
+                            return;
+                        }
+                    } 
+
+
+
                     SqlCommand cmd = new SqlCommand(
                         @"INSERT INTO issue_books 
         (student_name, student_enrollment, student_sem, student_contact, 
@@ -160,6 +178,9 @@ namespace Library_Management_System
                     cmd.Parameters.AddWithValue("@books_issue_date", dateTimePicker1.Value);
 
                     cmd.ExecuteNonQuery();
+
+                    SqlCommand cmd1 = new SqlCommand(@"update books_info set available_qty = available_qty - 1 where books_name = '"+ book_name.Text + "'" , conn);
+                    cmd1.ExecuteNonQuery();
                 }
 
                 MessageBox.Show("Book issued successfully");

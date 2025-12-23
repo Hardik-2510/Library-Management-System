@@ -30,7 +30,7 @@ namespace Library_Management_System
                 con.Open();
 
                 using (SqlCommand cmd = new SqlCommand(
-                    "INSERT INTO books_info VALUES (@bname,@author,@publisher,@purchase_date,@price,@qty)", con))
+                    "INSERT INTO books_info VALUES (@bname,@author,@publisher,@purchase_date,@price,@qty,@avail_qty)", con))
                 {
                     cmd.Parameters.AddWithValue("@bname", textBox1.Text);
                     cmd.Parameters.AddWithValue("@author", textBox2.Text);
@@ -38,6 +38,7 @@ namespace Library_Management_System
                     cmd.Parameters.AddWithValue("@purchase_date", dateTimePicker1.Text);
                     cmd.Parameters.AddWithValue("@price", Convert.ToInt32(textBox5.Text));
                     cmd.Parameters.AddWithValue("@qty", Convert.ToInt32(textBox6.Text));
+                    cmd.Parameters.AddWithValue("@avail_qty", Convert.ToInt32(textBox6.Text));
 
                     cmd.ExecuteNonQuery();
                 }
