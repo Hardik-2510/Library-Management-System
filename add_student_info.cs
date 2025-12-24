@@ -40,13 +40,12 @@ namespace Library_Management_System
 
                     using (SqlCommand cmd = new SqlCommand(
                         @"INSERT INTO student_info
-                          (student_name, student_image, student_enrollment_no,
+                          (student_name, student_enrollment_no,
                            student_department, student_sem, student_contact, student_email)
                           VALUES
-                          (@name, @image, @enroll, @dept, @sem, @contact, @email)", conn))
+                          (@name, @enroll, @dept, @sem, @contact, @email)", conn))
                     {
                         cmd.Parameters.AddWithValue("@name", textBox1.Text);
-                        cmd.Parameters.AddWithValue("@image", imageRelativePath);
                         cmd.Parameters.AddWithValue("@enroll", textBox2.Text);
                         cmd.Parameters.AddWithValue("@dept", textBox4.Text);
                         cmd.Parameters.AddWithValue("@sem", textBox3.Text);

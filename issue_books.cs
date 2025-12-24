@@ -161,10 +161,10 @@ namespace Library_Management_System
                     SqlCommand cmd = new SqlCommand(
                         @"INSERT INTO issue_books 
         (student_name, student_enrollment, student_sem, student_contact, 
-         student_email, student_dept, books_name, books_issue_date)
+         student_email, student_dept, books_name, books_issue_date , books_return_date)
          VALUES 
         (@student_name, @student_enrollment_no, @student_sem, @student_contact, 
-         @student_email, @student_dept, @books_name, @books_issue_date)",
+         @student_email, @student_dept, @books_name, @books_issue_date , @books_return_date)",
                         conn);
 
                     // Passing values safely
@@ -176,6 +176,7 @@ namespace Library_Management_System
                     cmd.Parameters.AddWithValue("@student_dept", s_department.Text);
                     cmd.Parameters.AddWithValue("@books_name", book_name.Text);
                     cmd.Parameters.AddWithValue("@books_issue_date", dateTimePicker1.Value);
+                    cmd.Parameters.AddWithValue("@books_return_date", string.Empty);
 
                     cmd.ExecuteNonQuery();
 

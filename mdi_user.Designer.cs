@@ -33,13 +33,14 @@
             booksToolStripMenuItem = new ToolStripMenuItem();
             addNewBooksToolStripMenuItem = new ToolStripMenuItem();
             viewBooksToolStripMenuItem = new ToolStripMenuItem();
+            issueBooksToolStripMenuItem = new ToolStripMenuItem();
             studentToolStripMenuItem = new ToolStripMenuItem();
             addStudentToolStripMenuItem = new ToolStripMenuItem();
             viewStudentToolStripMenuItem = new ToolStripMenuItem();
             statusStrip = new StatusStrip();
             toolStripStatusLabel = new ToolStripStatusLabel();
             toolTip = new ToolTip(components);
-            issueBooksToolStripMenuItem = new ToolStripMenuItem();
+            returnBookToolStripMenuItem = new ToolStripMenuItem();
             menuStrip.SuspendLayout();
             statusStrip.SuspendLayout();
             SuspendLayout();
@@ -57,7 +58,7 @@
             // 
             // booksToolStripMenuItem
             // 
-            booksToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { addNewBooksToolStripMenuItem, viewBooksToolStripMenuItem, issueBooksToolStripMenuItem });
+            booksToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { addNewBooksToolStripMenuItem, viewBooksToolStripMenuItem, issueBooksToolStripMenuItem, returnBookToolStripMenuItem });
             booksToolStripMenuItem.Name = "booksToolStripMenuItem";
             booksToolStripMenuItem.Size = new Size(77, 29);
             booksToolStripMenuItem.Text = "Books";
@@ -75,6 +76,13 @@
             viewBooksToolStripMenuItem.Size = new Size(270, 34);
             viewBooksToolStripMenuItem.Text = "View Books";
             viewBooksToolStripMenuItem.Click += viewBooksToolStripMenuItem_Click;
+            // 
+            // issueBooksToolStripMenuItem
+            // 
+            issueBooksToolStripMenuItem.Name = "issueBooksToolStripMenuItem";
+            issueBooksToolStripMenuItem.Size = new Size(270, 34);
+            issueBooksToolStripMenuItem.Text = "Issue Books";
+            issueBooksToolStripMenuItem.Click += issueBooksToolStripMenuItem_Click;
             // 
             // studentToolStripMenuItem
             // 
@@ -114,12 +122,12 @@
             toolStripStatusLabel.Size = new Size(60, 25);
             toolStripStatusLabel.Text = "Status";
             // 
-            // issueBooksToolStripMenuItem
+            // returnBookToolStripMenuItem
             // 
-            issueBooksToolStripMenuItem.Name = "issueBooksToolStripMenuItem";
-            issueBooksToolStripMenuItem.Size = new Size(270, 34);
-            issueBooksToolStripMenuItem.Text = "Issue Books";
-            issueBooksToolStripMenuItem.Click += issueBooksToolStripMenuItem_Click;
+            returnBookToolStripMenuItem.Name = "returnBookToolStripMenuItem";
+            returnBookToolStripMenuItem.Size = new Size(270, 34);
+            returnBookToolStripMenuItem.Text = "Return Book";
+            returnBookToolStripMenuItem.Click += returnBookToolStripMenuItem_Click;
             // 
             // mdi_user
             // 
@@ -157,6 +165,7 @@
         private ToolStripMenuItem addStudentToolStripMenuItem;
         private ToolStripMenuItem viewStudentToolStripMenuItem;
         private ToolStripMenuItem issueBooksToolStripMenuItem;
+        private ToolStripMenuItem returnBookToolStripMenuItem;
     }
 }
 
