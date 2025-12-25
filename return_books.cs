@@ -102,10 +102,12 @@ namespace Library_Management_System
             i = Convert.ToInt32(dataGridView1.SelectedCells[0].Value.ToString());
             SqlConnection conn = new SqlConnection(connStr);
             conn.Open();
-            SqlCommand cmd2 = new SqlCommand("update issue_books set books_return_date = '"+ dateTimePicker1.Value.ToString()+"' where Id = " + i + "" , conn);
-            cmd2.ExecuteNonQuery();
             SqlCommand cmd1 = new SqlCommand(@"update books_info set available_qty = available_qty + 1 where books_name = '" + lbl_booksName.Text + "'", conn);
-
+            cmd1.ExecuteNonQuery();
+            SqlCommand cmd2 = new SqlCommand(@"update issue_books set books_return_date = '"+ dateTimePicker1.Value.ToString()+"' where Id = " + i + "" , conn);
+            cmd2.ExecuteNonQuery();
+            SqlCommand cmd3 = new SqlCommand(@"delete from issue_books where Id = "+ i +"");
+            cmd3.ExecuteNonQuery();
             MessageBox.Show("Book returned successfully");
 
             panel3.Visible = false;
