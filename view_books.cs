@@ -1,23 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+﻿using Microsoft.Data.SqlClient;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using Microsoft.Data.SqlClient;
 
 namespace Library_Management_System
 {
     public partial class view_books : Form
     {
-        string connStr =
-            @"Data Source=HACKY_BOY\SQLEXPRESS;
-              Initial Catalog=lms;
-              Integrated Security=True;
-              TrustServerCertificate=True";
+        string connStr = Properties.Settings.Default.LibraryConnection;
         public view_books()
         {
             InitializeComponent();
@@ -236,7 +224,7 @@ namespace Library_Management_System
                 cmd.ExecuteNonQuery();
             }
 
-            LoadBooks(); 
+            LoadBooks();
 
             MessageBox.Show("Book updated successfully");
         }

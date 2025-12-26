@@ -1,16 +1,12 @@
-using System;
-using System.Windows.Forms;
 using Microsoft.Data.SqlClient;
 
 namespace Library_Management_System
 {
     public partial class login_form : Form
     {
-        string connStr =
-            @"Data Source=HACKY_BOY\SQLEXPRESS;
-              Initial Catalog=lms;
-              Integrated Security=True;
-              TrustServerCertificate=True";
+        //AttachedDBFilename=|DataDirectory|\lms.mdf;
+        string connStr = Properties.Settings.Default.LibraryConnection;
+
 
         public login_form()
         {
@@ -39,8 +35,8 @@ namespace Library_Management_System
 
             if (count > 0)
             {
-                this.Hide();
                 new mdi_user().Show();
+                this.Hide();
             }
             else
             {

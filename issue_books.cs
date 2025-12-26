@@ -1,23 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+﻿using Microsoft.Data.SqlClient;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using Microsoft.Data.SqlClient;
 
 namespace Library_Management_System
 {
     public partial class issue_books : Form
     {
-        string connStr =
-            @"Data Source=HACKY_BOY\SQLEXPRESS;
-              Initial Catalog=lms;
-              Integrated Security=True;
-              TrustServerCertificate=True";
+        string connStr = Properties.Settings.Default.LibraryConnection;
         public issue_books()
         {
             InitializeComponent();
@@ -154,7 +142,7 @@ namespace Library_Management_System
                             MessageBox.Show("Book not available");
                             return;
                         }
-                    } 
+                    }
 
 
 
@@ -180,7 +168,7 @@ namespace Library_Management_System
 
                     cmd.ExecuteNonQuery();
 
-                    SqlCommand cmd1 = new SqlCommand(@"update books_info set available_qty = available_qty - 1 where books_name = '"+ book_name.Text + "'" , conn);
+                    SqlCommand cmd1 = new SqlCommand(@"update books_info set available_qty = available_qty - 1 where books_name = '" + book_name.Text + "'", conn);
                     cmd1.ExecuteNonQuery();
                 }
 

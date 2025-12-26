@@ -1,23 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+﻿using Microsoft.Data.SqlClient;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using Microsoft.Data.SqlClient;
 
 namespace Library_Management_System
 {
     public partial class return_books : Form
     {
-        string connStr =
-            @"Data Source=HACKY_BOY\SQLEXPRESS;
-              Initial Catalog=lms;
-              Integrated Security=True;
-              TrustServerCertificate=True";
+        string connStr = Properties.Settings.Default.LibraryConnection;
 
         public return_books()
         {
@@ -104,9 +92,9 @@ namespace Library_Management_System
             conn.Open();
             SqlCommand cmd1 = new SqlCommand(@"update books_info set available_qty = available_qty + 1 where books_name = '" + lbl_booksName.Text + "'", conn);
             cmd1.ExecuteNonQuery();
-            SqlCommand cmd2 = new SqlCommand(@"update issue_books set books_return_date = '"+ dateTimePicker1.Value.ToString()+"' where Id = " + i + "" , conn);
+            SqlCommand cmd2 = new SqlCommand(@"update issue_books set books_return_date = '" + dateTimePicker1.Value.ToString() + "' where Id = " + i + "", conn);
             cmd2.ExecuteNonQuery();
-            SqlCommand cmd3 = new SqlCommand(@"delete from issue_books where Id = "+ i +"");
+            SqlCommand cmd3 = new SqlCommand(@"delete from issue_books where Id = " + i + "");
             cmd3.ExecuteNonQuery();
             MessageBox.Show("Book returned successfully");
 

@@ -1,19 +1,11 @@
-﻿using System;
+﻿using Microsoft.Data.SqlClient;
 using System.Data;
-using System.Drawing;
-using System.IO;
-using System.Windows.Forms;
-using Microsoft.Data.SqlClient;
 
 namespace Library_Management_System
 {
     public partial class view_student_info : Form
     {
-        string connStr =
-            @"Data Source=HACKY_BOY\SQLEXPRESS;
-              Initial Catalog=lms;
-              Integrated Security=True;
-              TrustServerCertificate=True";
+        string connStr = Properties.Settings.Default.LibraryConnection;
 
         public view_student_info()
         {
