@@ -43,35 +43,7 @@ The Parking Slot Booking System helps manage parking spaces digitally.
 
 ---
 
-## 📂 Project Structure
 
-Parking-Slot-Booking-System/
-│
-├── CSS/
-│   ├── index-css.css
-│   ├── signup-css.css
-│   ├── admin-dashboard.css
-│
-├── JS/
-│   ├── firebase.js
-│   ├── login.js
-│   ├── signup.js
-│   ├── script.js
-│
-├── Pages/
-│   ├── login.html
-│   ├── signup.html
-│   ├── admin-dashboard.html
-│   ├── customer-dashboard.html
-│
-├── Assets/
-│   └── images/
-│
-├── index.html
-└── README.md
-
-
----
 
 ## 🔐 Authentication Flow
 
@@ -79,24 +51,6 @@ Parking-Slot-Booking-System/
 2. Firebase Authentication verifies credentials
 3. User role is fetched from Firestore
 4. User is redirected to Admin or Customer dashboard
-
----
-
-## 🗃️ Firestore Database Structure
-
-users
- └── userUID
-      ├── name
-      ├── email
-      ├── role (admin / customer)
-      └── createdAt
-
-parking_locations
- └── autoID
-      ├── locationName
-      ├── city
-      ├── totalSlots
-      ├── availableSlots
 
 ---
 
