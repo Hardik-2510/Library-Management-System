@@ -46,29 +46,30 @@ The Parking Slot Booking System helps manage parking spaces digitally.
 ## 📂 Project Structure
 
 Parking-Slot-Booking-System/
-|
+│
 ├── CSS/
 │   ├── index-css.css
 │   ├── signup-css.css
 │   ├── admin-dashboard.css
-|
+│
 ├── JS/
 │   ├── firebase.js
 │   ├── login.js
 │   ├── signup.js
 │   ├── script.js
-|
+│
 ├── Pages/
 │   ├── login.html
 │   ├── signup.html
 │   ├── admin-dashboard.html
 │   ├── customer-dashboard.html
-|
+│
 ├── Assets/
-│   └── images
-|
+│   └── images/
+│
 ├── index.html
 └── README.md
+
 
 ---
 
